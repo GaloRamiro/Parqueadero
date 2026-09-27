@@ -10,11 +10,6 @@ public class Auto extends Vehiculo {
 
 	@Override
 	public double calcularTarifa(int horas) {
-		return horas * 1.50;
-	}
-
-	@Override
-	public double calcularTarifa(int horas) {
 		double total = horas * 1.50;
 		if (horas > 4) {
 			total = total + 2.00;
