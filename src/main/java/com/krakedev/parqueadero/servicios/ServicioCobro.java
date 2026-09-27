@@ -27,8 +27,16 @@ public class ServicioCobro {
 		tickets.add(ticket);
 		return ticket;
 	}
-	
+
 	public ArrayList<TicketCobro> listarTickets() {
-	    return tickets;
+		return tickets;
+	}
+
+	public double calcularTotalRecaudado() {
+		double total = 0;
+		for (TicketCobro ticket : tickets) {
+		    total = total + ticket.getTotal();
+		}
+		return total;
 	}
 }
