@@ -24,6 +24,10 @@ public class ServicioVehiculos {
 		if (buscarPorPlaca(vehiculo.getPlaca()) != null) {
 			return false;
 		}
-		return false;
+		 if (vehiculos.size() >= 10) {
+		        return false;
+		    }
+		 vehiculos.add(vehiculo);
+		    return true;
 	}
 }
