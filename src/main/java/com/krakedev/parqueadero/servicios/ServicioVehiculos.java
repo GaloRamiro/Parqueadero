@@ -30,4 +30,7 @@ public class ServicioVehiculos {
 		 vehiculos.add(vehiculo);
 		    return true;
 	}
+	public ArrayList<Vehiculo> listarVehiculos() {
+	    return vehiculos;
+	}
 }
