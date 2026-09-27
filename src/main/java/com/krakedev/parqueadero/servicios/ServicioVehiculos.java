@@ -9,17 +9,21 @@ import com.krakedev.parqueadero.modelo.Vehiculo;
 @Service
 public class ServicioVehiculos {
 	private ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
-	
-	//BUSCAR
+
+	// BUSCAR
 	public Vehiculo buscarPorPlaca(String placa) {
 		for (Vehiculo v : vehiculos) {
-		    if (v.getPlaca().equals(placa)) {
-		        return v;
-		    }
+			if (v.getPlaca().equals(placa)) {
+				return v;
+			}
 		}
-	return null;
+		return null;
 	}
 
+	public boolean agregarVehiculo(Vehiculo vehiculo) {
+		if (buscarPorPlaca(vehiculo.getPlaca()) != null) {
+			return false;
+		}
+		return false;
+	}
 }
-
-
