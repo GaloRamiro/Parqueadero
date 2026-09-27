@@ -24,5 +24,11 @@ public class ServicioCobro {
 		double total = vehiculo.calcularTarifa(horas);
 		String codigo = "T-" + (tickets.size() + 1);
 		TicketCobro ticket = new TicketCobro(codigo, placa, horas, total);
+		tickets.add(ticket);
+		return ticket;
+	}
+	
+	public ArrayList<TicketCobro> listarTickets() {
+	    return tickets;
 	}
 }
