@@ -19,18 +19,28 @@ public class ServicioVehiculos {
 		}
 		return null;
 	}
-
+//agregar 
 	public boolean agregarVehiculo(Vehiculo vehiculo) {
 		if (buscarPorPlaca(vehiculo.getPlaca()) != null) {
 			return false;
 		}
-		 if (vehiculos.size() >= 10) {
-		        return false;
-		    }
-		 vehiculos.add(vehiculo);
-		    return true;
+		if (vehiculos.size() >= 10) {
+			return false;
+		}
+		vehiculos.add(vehiculo);
+		return true;
 	}
+
 	public ArrayList<Vehiculo> listarVehiculos() {
-	    return vehiculos;
+		return vehiculos;
+	}
+	
+	public Vehiculo retirarVehiculo(String placa) {
+		Vehiculo vehiculo = buscarPorPlaca(placa);
+		if(vehiculo != null) {
+			vehiculos.remove(vehiculo);
+			return vehiculo;
+		}
+		return null;
 	}
 }
